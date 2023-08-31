@@ -1,5 +1,3 @@
-import ProfilePhoto from "./Avatar";
-
 function Profile() {
   return (
     <div>
@@ -14,7 +12,7 @@ export default function Gallery() {
     <section>
       <h1>Amazing scientists</h1>
       <Profile />
-      <ProfilePhoto />
+      {/* <ProfilePhoto /> */}
     </section>
   );
 }
