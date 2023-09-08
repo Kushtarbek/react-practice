@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Forms from "./Forms";
 
 const COLORS = ["pink", "green", "blue", "yellow", "purple"];
 
@@ -7,6 +8,8 @@ function ButtonGroup() {
   const onButtonClick = (color) => () => {
     setBackgroundColor(color);
   };
+
+  let statuses = ["empty", "typing", "submitting", "success", "error"];
 
   return (
     <div style={{ backgroundColor }}>
@@ -20,6 +23,14 @@ function ButtonGroup() {
           {color}
         </button>
       ))}
+      <>
+        {statuses.map((status) => {
+          <section key={status}>
+            <h4>Form: ({status})</h4>
+            <Forms status={status} />
+          </section>;
+        })}
+      </>
     </div>
   );
 }
