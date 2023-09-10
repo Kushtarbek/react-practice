@@ -35,7 +35,7 @@ function App() {
      <Gallery />
      <div>
       
-     <Form className={formStyle}/>
+     <Form />
      <br/>
      <Events />
      </div>
