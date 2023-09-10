@@ -2,6 +2,7 @@ import Computers from './component/Computers';
 import Gallery from './component/Sculptures';
 import ButtonGroup from './component/Buttons';
 import Form from './component/InputFields';
+import Events from './component/RespondingToEvents';
 
 function Button ({text= "Click Me!", color="blue", fontSize="12", handleClick}) {
 
@@ -9,6 +10,7 @@ function Button ({text= "Click Me!", color="blue", fontSize="12", handleClick}) 
     color: color,
     fontSize: fontSize + 'px'
   }
+ 
   return (<button onClick={() => handleClick('https://www.timer-tab.com/')} style={buttonStyle}>{text}</button>)
 }
 
@@ -24,15 +26,20 @@ function App() {
     <div className='App'>
     
 
-     <Button handleClick={handleButtonClick}/>
+     {/* <Button handleClick={handleButtonClick}/> */}
      {/* <Button text="Don't Click Me!" color="red" fontSize={12}/>
      <Button text="Click Me!" color="blue" fontSize={20}/> */}
-      <ButtonGroup/>
+      {/* <ButtonGroup/> */}
 
-     <Computers />
+     {/* <Computers /> */}
      <Gallery />
-     <Form/>
-
+     <div>
+      
+     <Form className={formStyle}/>
+     <br/>
+     <Events />
+     </div>
+     
     </div>
   ); 
 }
