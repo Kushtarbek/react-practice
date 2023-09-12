@@ -13,6 +13,7 @@ export default function Events() {
       <h3>-------------------------</h3>
 
       <PlayButton movieName="Howl's moving castle" />
+      <PlayButton></PlayButton>
       <UploadButton />
     </div>
   );

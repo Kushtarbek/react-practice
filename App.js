@@ -3,6 +3,7 @@ import Gallery from './component/Sculptures';
 import ButtonGroup from './component/Buttons';
 import Form from './component/InputFields';
 import Events from './component/RespondingToEvents';
+import LandingPage from './component/LandingPage';
 
 function Button ({text= "Click Me!", color="blue", fontSize="12", handleClick}) {
 
@@ -32,13 +33,14 @@ function App() {
       {/* <ButtonGroup/> */}
 
      {/* <Computers /> */}
-     <Gallery />
+     {/* <Gallery />
      <div>
       
      <Form />
      <br/>
      <Events />
-     </div>
+     </div> */}
+     <LandingPage />
      
     </div>
   ); 
