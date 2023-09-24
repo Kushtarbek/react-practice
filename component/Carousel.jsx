@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+// import { useMotionValue, useTransform } from "framer-motion";
+// import { Frame } from "framer";
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,7 +18,7 @@ const Carousel = ({ images }) => {
 
   return (
     <div className="carousel">
-      <img key={currentIndex} src={images[currentIndex]} />
+      <img key={currentIndex} src={images[currentIndex]} alt="" />
       <div className="slide_direction">
         <div className="left" onClick={handlePrev}>
           <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 96 960 960" width="20">

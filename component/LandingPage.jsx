@@ -6,6 +6,7 @@ export default function LandingPage() {
           src="https://w7.pngwing.com/pngs/42/36/png-transparent-airbnb-logo-san-francisco-travel-hotel-airbnb-logo-text-trademark-logo-thumbnail.png"
           width={"90px"}
           height={"30px"}
+          alt=''
         />
         <input
           type="text"

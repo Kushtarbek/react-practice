@@ -5,6 +5,7 @@ import Form from './component/InputFields';
 import Events from './component/RespondingToEvents';
 import LandingPage from './component/LandingPage';
 import Carousel from './component/Carousel';
+import UseCaseUseEffect from './Hooks/UseCaseFetchAPI';
 
 const images = [
   "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -53,6 +54,7 @@ function App() {
      <LandingPage />
 
      <Carousel images={images} />
+     <UseCaseUseEffect/>
      
     </div>
   ); 
