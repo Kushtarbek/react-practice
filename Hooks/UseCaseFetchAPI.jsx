@@ -28,3 +28,5 @@ const UseCaseUseEffect = (props) => {
 };
 
 export default UseCaseUseEffect;
+
+//https://dev.to/colocodes/6-use-cases-of-the-useeffect-reactjs-hook-282o
