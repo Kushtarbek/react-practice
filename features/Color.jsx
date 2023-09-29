@@ -1,20 +1,33 @@
 import { useState } from "react"; // useState() hook
-import { useSelector } from "react"; // useState() hook
-import { changeColor } from "../features/color"; // useState() hook
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { changeColor } from "../features/color";
 
 const ChangeColor = () => {
   const [color, setColor] = useState("");
 
+  // Accessing the dispatch function from react-redux
   const dispatch = useDispatch();
+
+  // Accessing the theme color value from the Redux store
   const themeColor = useSelector((state) => state.theme.value);
+
+  const handleColorChange = (e) => {
+    setColor(e.target.value);
+  };
+
+  const handleButtonClick = () => {
+    dispatch(changeColor(color));
+  };
+
   return (
-    <div>
+    <div style={{ color: themeColor }}>
       <p>Progressively effective resources via business metrics.</p>
       <br />
       <div className="inputBtn-container">
-        <input type="text" className="input" />
-        <button className="btn">change color text</button>
+        <input type="text" className="input" onChange={handleColorChange} />
+        <button className="btn" onClick={handleButtonClick}>
+          Change color text
+        </button>
       </div>
     </div>
   );
